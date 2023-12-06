@@ -1,8 +1,10 @@
 ;===== machine: P1S ========================
-;===== date: 20230707 =====================
-;===== turn on the HB fan =================
+;===== date: 20231107 =====================
+;===== turn on the HB fan & MC board fan =================
 M104 S75 ;set extruder temp to turn on the HB fan and prevent filament oozing from nozzle
+M710 A1 S255 ;turn on MC fan by default(P1S)
 ;===== reset machine status =================
+M290 X40 Y40 Z2.6666666
 G91
 M17 Z0.4 ; lower the z-motor current
 G380 S2 Z30 F300 ; G380 is same as G38; lower the hotbed , to prevent the nozzle is below the hotbed
